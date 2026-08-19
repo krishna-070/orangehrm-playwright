@@ -1,0 +1,26 @@
+{
+  "name": "orangehrm-playwright",
+  "version": "1.0.0",
+  "description": "Playwright + JavaScript test automation for the OrangeHRM demo site",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "report": "playwright show-report",
+    "test:login": "playwright test tests/login.spec.js",
+    "test:pim": "playwright test tests/employee-search.spec.js"
+  },
+  "keywords": [
+    "playwright",
+    "orangehrm",
+    "automation",
+    "pom"
+  ],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.2.0"
+  }
+}
