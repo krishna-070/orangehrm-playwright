@@ -6,7 +6,7 @@ const VALID_USERNAME = 'Admin';
 const VALID_PASSWORD = 'admin123';
 
 test.describe('OrangeHRM - Login', () => {
-  /** @type {LoginPage} */
+  /** @type {LoginPage}  JENKINS-TEST*/
   let loginPage;
 
   test.beforeEach(async ({ page }) => {
