@@ -14,14 +14,14 @@ test.describe('OrangeHRM - Login', () => {
     await loginPage.goto();
   });
 
-  test('TC01 - valid credentials log the user in and load the dashboard @AS360TC-6', async ({ page }) => {
+  test('TC01 - valid credentials log the user in and load the dashboard @AS360TC-1', async ({ page }) => {
     await loginPage.login(VALID_USERNAME, VALID_PASSWORD);
 
     await expect(page).toHaveURL(/dashboard/);
     await expect(loginPage.dashboardHeader).toBeVisible();
   });
 
-  test('TC02 - invalid credentials show an "Invalid credentials" error @AS360TC-7', async ({ page }) => {
+  test('TC02 - invalid credentials show an "Invalid credentials" error @AS360TC-2', async ({ page }) => {
     await loginPage.login('InvalidUser', 'wrongpassword');
 
     await expect(loginPage.errorMessage).toBeVisible();
