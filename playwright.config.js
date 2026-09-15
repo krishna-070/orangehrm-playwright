@@ -14,7 +14,7 @@ export default defineConfig({
   reporter: [['list'], ['html', { open: 'never' }]],
   use: {
     baseURL: 'https://opensource-demo.orangehrmlive.com',
-    headless: true,
+    headless: process.env.HEADED !== 'true',
     screenshot: 'only-on-failure',
     trace: 'on-first-retry',
     actionTimeout: 15_000,
